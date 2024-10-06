@@ -1,7 +1,7 @@
 <template>
 
     <div>Index</div>
-    <div>The message is {{ message }}</div>
+    <div>The message is  {{ message }}</div>
 
 
 </template>
