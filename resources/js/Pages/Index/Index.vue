@@ -1,8 +1,8 @@
 <template>
-    <MainLayout>
-        <div>Index</div>
-        <div>The message is {{ message }}</div>
-    </MainLayout>
+
+    <div>Index</div>
+    <div>The message is {{ message }}</div>
+
 
 </template>
 
@@ -14,3 +14,10 @@ defineProps({
 })
 
 </script>
+
+<!-- <script>
+import MainLayout from '../../Layouts/MainLayout.vue';
+export default {
+    layout: MainLayout
+}
+</script> -->
