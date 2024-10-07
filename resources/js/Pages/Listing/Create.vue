@@ -1,5 +1,5 @@
 <template>
-{{ form }}
+<!-- {{ form }} -->
 
     <form @submit.prevent="create">
         <div>
