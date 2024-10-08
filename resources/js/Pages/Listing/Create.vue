@@ -1,5 +1,5 @@
 <template>
-<!-- {{ form }} -->
+    <!-- {{ form }} -->
 
     <form @submit.prevent="create">
         <div>
@@ -90,14 +90,17 @@ const form = useForm({
 
 // const create = () => router.post('/listing', form)
 
-const create = () => {
-    form.post('/listing', {
-        onSuccess: () => router.replace('/listing'),
-        onError: (errors) => {
-            form.errors = errors
-        },
-    })
-}
+// const create = () => {
+//     form.post('/listing', {
+//         onSuccess: () => router.replace('/listing'),
+//         onError: (errors) => {
+//             form.errors = errors
+//         },
+//     })
+// }
+
+// with ziggy
+const create = () => form.post(route('listing.store'))
 
 </script>
 
