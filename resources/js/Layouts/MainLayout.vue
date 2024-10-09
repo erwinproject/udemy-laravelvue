@@ -12,8 +12,8 @@
                 <div class="text-xl text-indigo-600 dark:text-indigo-300">
                     <Link :href="route('listing.index')">LaraUdemy</Link>
                 </div>
-                <div class="bg-indigo-600 hover:bg-indigo-400 text-white font-medium p-2 rounded-md">
-                    <Link :href="route('listing.create')">+ New Listing</Link>
+                <div>
+                    <Link :href="route('listing.create')" class="btn-primary">+ New Listing</Link>
                 </div>
             </nav>
         </div>
