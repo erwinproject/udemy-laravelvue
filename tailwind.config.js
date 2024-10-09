@@ -1,14 +1,14 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  darkMode: 'selector',
-  // ...
-}
+// module.exports = {
+//   darkMode: 'selector',
+//   // ...
+// }
 
 export default {
   content: [
     './storage/framework/views/*.php',
-    './resource/views/**/*.blade.php',
-    './resource/js/**/*.vue',
+    './resources/views/**/*.blade.php',
+    './resources/js/**/*.vue',
   ],
   theme: {
     extend: {},
@@ -16,7 +16,7 @@ export default {
   plugins: [
     require('@tailwindcss/forms'),
   ],
-  
-  
+
+
 }
 
