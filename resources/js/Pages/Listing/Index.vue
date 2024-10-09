@@ -1,19 +1,22 @@
 <template>
-    <div v-for="listing in listings" :key="listing.id">
-        <!-- Without composer ziggy -->
-        <!-- <Link :href="`/listing/${listing.id}`"> -->
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+        <Box v-for="listing in listings" :key="listing.id">
+            <!-- Without composer ziggy -->
+            <!-- <Link :href="`/listing/${listing.id}`"> -->
 
-        <!-- with ziggy -->
-        <!-- <Link :href="route('listing.show', [listing.id])"> -->
-        <Link :href="route('listing.show', { listing: listing.id })">
-        <ListingAddress :listing="listing" />
-        </Link>
-        <div>
-            <Link :href="route('listing.edit', { listing: listing.id })" as="button">Edit</Link>&nbsp;
-            <Link :href="route('listing.destroy', { listing: listing.id })" method="DELETE" as="button">Delete</Link>
-        </div>
-        <div>
-        </div>
+            <!-- with ziggy -->
+            <!-- <Link :href="route('listing.show', [listing.id])"> -->
+            <Link :href="route('listing.show', { listing: listing.id })">
+            <ListingAddress :listing="listing" />
+            </Link>
+            <div>
+                <Link :href="route('listing.edit', { listing: listing.id })" as="button">Edit</Link>&nbsp;
+                <Link :href="route('listing.destroy', { listing: listing.id })" method="DELETE" as="button">Delete
+                </Link>
+            </div>
+            <div>
+            </div>
+        </Box>
     </div>
 
 </template>
@@ -21,6 +24,7 @@
 <script setup>
 import { Link } from '@inertiajs/vue3'
 import ListingAddress from '@/Components/ListingAddress.vue'
+import Box from '@/Components/UI/Box.vue'
 
 defineProps({
     listings: Array,
